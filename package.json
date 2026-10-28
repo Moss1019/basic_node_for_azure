@@ -1,0 +1,35 @@
+{
+  "name": "basic_node_for_azure",
+  "version": "1.0.0",
+  "description": "Basic application with a NodeJS + Express backend api server, and a React based Frontend. This project is meant to test Azure Devops operations, integration with boards, creating build and release pipelines and linking to user stories.",
+  "homepage": "https://github.com/Moss1019/basic_node_for_azure#readme",
+  "bugs": {
+    "url": "https://github.com/Moss1019/basic_node_for_azure/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Moss1019/basic_node_for_azure.git"
+  },
+  "license": "ISC",
+  "author": "",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "run": "node ./dist/index.js",
+    "build": "cd ./app/basic_node_fe_for_azure && npm run build && cd ../.. && cp -r ./app/basic_node_fe_for_azure/dist ./dist/app && tsc",
+    "swagger": "node ./swagger.js",
+    "clean": "[ -d dist ] && rm -r dist"
+  },
+  "dependencies": {
+    "cors": "^2.8.6"
+  },
+  "devDependencies": {
+    "@types/cors": "^2.8.19",
+    "@types/express": "^5.0.6",
+    "@types/jest": "^30.0.0",
+    "express": "^5.2.1",
+    "jest": "^30.4.2",
+    "ts-jest": "^29.4.9",
+    "typescript": "^5.5.3"
+  }
+}
